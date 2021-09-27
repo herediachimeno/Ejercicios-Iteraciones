@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="numero1-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <script>
+      let dia;
+      let mes;
+      let anyo;
+      let sumaFecha;
+      let total;
+      let total1;
+      let numero1 = 0;
+      let numero2 = 0;
+
+      dia = parseInt(prompt("¿Qué día naciste?"));
+      mes = parseInt(prompt("¿Qué mes naciste?"));
+      anyo = parseInt(prompt("¿Qué año naciste?"));
+      sumaFecha = (dia + mes + anyo).toString();
+
+      do {
+        numero1 = sumaFecha.length;
+        total = 0;
+
+        while (numero1 > 0) {
+          total1 = parseInt(sumaFecha.substring(numero1 - 1, numero1));
+          total = parseInt(total);
+          total = total + total1;
+          numero1--;
+        }
+
+        sumaFecha = total.toString();
+        numero2 = sumaFecha.length;
+      } while (numero2 !== 1);
+
+      window.alert(`Tu número de la suerte es el ${total}`);
+    </script>
+  </body>
+</html>

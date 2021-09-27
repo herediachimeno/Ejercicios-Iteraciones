@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div id="div1"></div>
+    </main>
+
+    <script>
+      do {
+        let valor = window.prompt("Escribe P(par) o I(impar)");
+        if (valor == "P") {
+          for (let i = 2; i <= 100; i = i + 2) {
+            console.log(i);
+          }
+        } else if (valor == "I") {
+          for (let i = 1; i <= 100; i = i + 2) {
+            console.log(i);
+          }
+        } else {
+          window.alert("Introduce una opción válida");
+        }
+      } while (valor == P || valor == I);
+    </script>
+  </body>
+</html>

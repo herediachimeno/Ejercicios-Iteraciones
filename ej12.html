@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <script>
+      let numString = "";
+
+      do {
+        numString = prompt("Dime un número de tres digitos");
+        let stringA = numString.substring(0, 1);
+        let stringB = numString.substring(1, 2);
+        let stringC = numString.substring(2, 3);
+
+        let num1 = parseInt(stringA);
+        let num2 = parseInt(stringB);
+        let num3 = parseInt(stringC);
+
+        let suma = num1 + num2 + num3;
+
+        if (numString.length !== 3) {
+          window.alert(
+            "Es necesario un número de tres dígitos. Terminamos la operación"
+          );
+        } else {
+          window.alert(
+            "El resultado de la suma de los tres dígitos es de " + suma
+          );
+        }
+      } while (numString.length == 3);
+    </script>
+  </body>
+</html>
